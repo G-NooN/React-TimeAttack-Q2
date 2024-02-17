@@ -115,3 +115,13 @@ function TodoListSection({ isActive }) {
 }
 
 export default TodoListSection;
+
+// REVIEW: 함수 공통화 질문
+/*
+  InputSection.jsx / TodoListSection.jsx / Detail.jsx
+  - dispatch : 사용 / 사용 / 사용
+  - navigate : - / 사용 / 사용
+  - reducer(delete) : - / 사용 / 사용
+
+  공통적으로 사용되는 위 함수들을 common 폴더에 넣어서 사용하는 것이 바람직한가?
+*/
