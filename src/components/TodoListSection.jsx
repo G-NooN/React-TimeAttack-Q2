@@ -26,13 +26,6 @@ function TodoListSection({ isActive }) {
   return (
     <>
       {/* isActive 속성에 따라 조건부 출력 */}
-      {/*
-        // REVIEW: 출력 구문 간결화 가능?
-        - 삼항연산자를 사용하여 TodoList-DoneList를 분리
-        - However, diff = 단순히 filter를 사용하여 todoItem.isDone ?? isActive
-        - 나머지 map 부분은 모두 동일
-        - 이를 간결하게 출력할 수 있는 방법이 있는가?
-      */}
       {isActive === true ? (
         // TodoList
         <>
@@ -115,13 +108,3 @@ function TodoListSection({ isActive }) {
 }
 
 export default TodoListSection;
-
-// REVIEW: 함수 공통화 질문
-/*
-  InputSection.jsx / TodoListSection.jsx / Detail.jsx
-  - dispatch : 사용 / 사용 / 사용
-  - navigate : - / 사용 / 사용
-  - reducer(delete) : - / 사용 / 사용
-
-  공통적으로 사용되는 위 함수들을 common 폴더에 넣어서 사용하는 것이 바람직한가?
-*/
